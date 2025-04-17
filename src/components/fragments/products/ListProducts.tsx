@@ -50,7 +50,11 @@ const ListProducts = ({ products, isLoading }: ListProductProps) => {
               className="max-w-28"
             />
             <p className="text-base lg:text-xl mt-4">
+<<<<<<< HEAD
               Sorry, the product you are looking for is not available
+=======
+              Sorry, the product you're looking for is not available
+>>>>>>> ce285f17c63de2373af0ba8f14759f3c517affe6
             </p>
           </div>
         )}
