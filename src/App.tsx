@@ -11,9 +11,9 @@ const HomePage = React.lazy(() =>
 const LoginPage = React.lazy(() =>
   wait(1000).then(() => import("./pages/login"))
 );
-const ProductPage = React.lazy(() =>
-  wait(1000).then(() => import("./pages/products"))
-);
+// const ProductPage = React.lazy(() =>
+//   wait(1000).then(() => import("./pages/products"))
+// );
 const RegisterPage = React.lazy(() =>
   wait(1000).then(() => import("./pages/register"))
 );
@@ -70,7 +70,7 @@ function App() {
     },
     {
       path: "/products",
-      element: <ProductPage />,
+      // element: <ProductPage />,
     },
     {
       path: "/product/:id",
