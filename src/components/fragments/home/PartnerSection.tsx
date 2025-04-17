@@ -1,9 +1,9 @@
 const PartnerSection = () => {
   return (
     <div className="container py-12 text-center">
-      <p className="font-semibold text-xl text-accent">Partner & Clients</p>
+      <p className="font-semibold text-xl text-accent">Partners & Clients</p>
       <h1 className="font-bold text-4xl mt-2">
-        Kami Bekerja Dengan Klien Terbaik
+        We Work With the Best Clients
       </h1>
       <div className="flex flex-wrap items-center justify-center py-4 md:py-12">
         <div className="w-1/3 md:w-1/4 lg:w-1/5 flex justify-center items-center">

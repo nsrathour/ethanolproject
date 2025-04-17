@@ -13,13 +13,11 @@ const ListProduct = ({ products }: ListProductProps) => {
   return (
     <div className="bg-slate-50 mt-6 px-6">
       <div className="container py-12 text-center">
-        <h1 className="text-4xl font-bold">Produk Terbaik</h1>
+        <h1 className="text-4xl font-bold">Best Products</h1>
         <p className="text-base mt-4 sm:mt-6">
-          Nikmati kelezatan terbaik dari buah-buahan pilihan kami, segar dan
-          menyehatkan.
+          Enjoy the finest selection of our fresh and healthy fruits.
           <br />
-          Setiap gigitan adalah perpaduan sempurna cita rasa dan nutrisi terbaik
-          alam.
+          Every bite is a perfect blend of taste and nature's best nutrition.
         </p>
         <div className="mt-6 sm:mt-8 flex flex-wrap justify-center">
           {products.length < 1
@@ -46,7 +44,7 @@ const ListProduct = ({ products }: ListProductProps) => {
             classname="font-medium text-base bg-primary text-white rounded-md py-2 px-4 
           hover:bg-green-700 mt-4"
           >
-            Lihat Semua Buah
+            View All Fruits
           </Button>
         </Link>
       </div>
