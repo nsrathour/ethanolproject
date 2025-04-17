@@ -57,7 +57,7 @@ const DetailProductPage = () => {
             {!isLoading ? (
               <div>
                 <h1 className="text-base md:text-xl font-semibold">
-                  Ulasan Pembeli
+                Customer Reviews
                 </h1>
                 <CartUlasan />
               </div>
