@@ -12,8 +12,11 @@ const Footer = () => {
             <h3 className="mt-2 mb-1 text-xl font-semibold text-dark">
               Contact Us
             </h3>
-            <p>buahkita@gmail.com</p>
-            <p>Malang, Indonesia</p>
+            <p>Navditya Singh Rathour</p>
+            <p>Prajjwal Kumar</p>
+            <p>Piyush Abrol</p>
+            <p>Nitin Mehta</p>
+            <p>Chitkara University , Himachal Pardesh</p>
           </div>
           <div className="mb-8 w-full px-4 md:w-1/3">
             <h3 className="mb-5 text-xl font-semibold text-dark">
