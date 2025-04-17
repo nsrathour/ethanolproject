@@ -8,7 +8,7 @@ const RightSection = () => {
           <span className="text-accent">in</span> touch
         </h1>
         <h1 className="mt-16 text-2xl font-semibold">
-          Jangan ragu untuk menyapa kami!
+          Don't hesitate to reach out to us!
         </h1>
 
         <div className="mt-16">
@@ -17,8 +17,8 @@ const RightSection = () => {
           <p className="text-base font-medium text-gray-500 mt-8">Email</p>
           <p>buahkita@mail.com</p>
           <p className="text-base font-medium text-gray-500 mt-8">Office</p>
-          <p>Jalan Soekarno Hatta, Lowokwaru, Kota Malang</p>
-          <p className="underline cursor-pointer">Lihat di google maps</p>
+          <p>Jalan Soekarno Hatta, Lowokwaru, Malang City</p>
+          <p className="underline cursor-pointer">View on Google Maps</p>
         </div>
       </div>
     </div>
