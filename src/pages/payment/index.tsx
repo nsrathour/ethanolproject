@@ -77,7 +77,7 @@ const PaymentPage = () => {
         {checkoutData && (
           <div className="container py-16 md:py-20 px-4">
             <h1 className="text-xl md:text-2xl font-semibold mt-4">
-              Beli Langsung
+              Buy Now
             </h1>
             <div className="flex flex-wrap mt-4">
               <div className="w-full md:w-2/3 md:pe-1">
@@ -88,14 +88,13 @@ const PaymentPage = () => {
                   setProductCart={setProductCart}
                 />
                 <h1 className="mt-4 text-lg md:text-xl font-semibold">
-                  Pembayaran
+                  Payment
                 </h1>
                 <div className="w-full sm:w-1/2 py-2">
                   <PaymentMethodCard paymentMethods={paymentMethod} />
                 </div>
                 <p className="text-sm text-red-500 mt-2">
-                  * Mohon maaf metode pembayaran yang bisa digunakan saat ini
-                  hanya Bank BCA
+                  * We apologize, the only payment method available at the moment is Bank CSE.
                 </p>
               </div>
               <ShoppingSummary
