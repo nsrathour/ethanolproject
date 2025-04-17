@@ -6,8 +6,7 @@ const WarningCart = () => {
       </div>
       <div className="w-4/5">
         <p className="text-base text-gray-500">
-          Ini halaman terakhir dari proses belanjamu. Pastikan semua sudah
-          benar, ya. 😊
+          This is the final step of your shopping process. Make sure everything is correct. 😊
         </p>
       </div>
     </div>
