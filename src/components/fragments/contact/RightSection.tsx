@@ -13,11 +13,11 @@ const RightSection = () => {
 
         <div className="mt-16">
           <p className="text-base font-medium text-gray-500">Phone</p>
-          <p>+(62) 851-365-379</p>
+          <p>+91 851-365-xxxx</p>
           <p className="text-base font-medium text-gray-500 mt-8">Email</p>
-          <p>buahkita@mail.com</p>
+          <p>chitkara@mail.com</p>
           <p className="text-base font-medium text-gray-500 mt-8">Office</p>
-          <p>Jalan Soekarno Hatta, Lowokwaru, Malang City</p>
+          <p>chitkara university, HP</p>
           <p className="underline cursor-pointer">View on Google Maps</p>
         </div>
       </div>
