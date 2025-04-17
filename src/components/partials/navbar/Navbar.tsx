@@ -6,6 +6,7 @@ import {
   faHistory,
   faUser,
   faXmark,
+  
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 import { useIsUserLogin } from "../../../context/IsLogin";
@@ -43,7 +44,7 @@ const Navbar = () => {
         <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
           <div className="cursor-pointer">
             <img
-              src="/images/logo.png"
+              src="https://vectorlogoseek.com/wp-content/uploads/2020/07/ethanol-energy-a-s-vector-logo.png"
               alt="FruitKita Logo"
               className="max-w-28"
             />
