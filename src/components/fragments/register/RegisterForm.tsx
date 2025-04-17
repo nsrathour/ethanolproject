@@ -45,35 +45,32 @@ const RegisterForm = () => {
   const validationForm = (): boolean => {
     const validationErrors: ValidationErrors = {};
     if (!formData.username.trim()) {
-      validationErrors.username = "username is required";
+      validationErrors.username = "Username is required";
     }
 
     if (!formData.email.trim()) {
-      validationErrors.email = "email is required";
+      validationErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      validationErrors.email = "email is not valid";
+      validationErrors.email = "Email is not valid";
     }
 
     if (!formData.phone.trim()) {
-      validationErrors.phone = "username is required";
+      validationErrors.phone = "Phone number is required";
     }
 
     if (!formData.password.trim()) {
-      validationErrors.password = "password is required";
+      validationErrors.password = "Password is required";
     } else if (formData.password.length < 6) {
-      validationErrors.password = "password should be at least 6 char";
+      validationErrors.password = "Password must be at least 6 characters";
     }
 
     if (formData.confirmPass !== formData.password) {
-      validationErrors.confirmPass = "password not matched";
+      validationErrors.confirmPass = "Passwords do not match";
     }
 
     setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length === 0) {
-      return true;
-    }
-    return false;
+    return Object.keys(validationErrors).length === 0;
   };
 
   useEffect(() => {
@@ -92,7 +89,6 @@ const RegisterForm = () => {
         password: formData.password,
         phone: formData.phone,
       };
-
 
       const result = await registerAuth(
         data.username,
@@ -118,7 +114,7 @@ const RegisterForm = () => {
           classname="mt-8"
           label="Username"
           name="username"
-          placeholder="Silahkan masukkan username anda "
+          placeholder="Please enter your username"
           type="text"
           ref={usernameRef}
           onInputChange={handleChange}
@@ -128,42 +124,44 @@ const RegisterForm = () => {
           classname="mt-4"
           label="Email"
           name="email"
-          placeholder="Silahkan masukkan email anda "
+          placeholder="Please enter your email"
           type="email"
           onInputChange={handleChange}
           errorMessage={errors.email}
         />
         <InputForm
           classname="mt-4"
-          label="No Telepon"
+          label="Phone Number"
           name="phone"
-          placeholder="Silahkan masukkan nomor telepon anda "
+          placeholder="Please enter your phone number"
           type="number"
           onInputChange={handleChange}
           errorMessage={errors.phone}
         />
-        <p className="text-xs mt-1">* gunakan nomor telepon dengan diawali 62 (contoh : 628523562728)</p>
+        <p className="text-xs mt-1">
+          * use phone number starting with +91 (example: +91 80911XXXXXX)
+        </p>
         <InputForm
           classname="mt-4"
           label="Password"
           name="password"
-          placeholder="Silahkan masukkan password anda"
+          placeholder="Please enter your password"
           type="password"
           onInputChange={handleChange}
           errorMessage={errors.password}
         />
         <InputForm
           classname="mt-4"
-          label="Konfirmasi Password"
+          label="Confirm Password"
           name="confirmPass"
-          placeholder="Silahkan masukkan konfirmasi password anda"
+          placeholder="Please confirm your password"
           type="password"
           onInputChange={handleChange}
           errorMessage={errors.confirmPass}
         />
         <div className="flex justify-center">
           <Button classname="bg-primary text-white mt-6 lg:mt-12" type="submit">
-            Daftar
+            Register
           </Button>
         </div>
       </form>
