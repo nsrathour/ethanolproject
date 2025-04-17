@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="container px-8 min-h-screen flex flex-wrap items-center">
       <div className="w-full md:w-1/2">
         <p className="py-2 px-4 bg-green-100 inline-block text-primary rounded-xl">
-          Fresh and Healthy Fruits 🍉
+          Kitchen Waste into Green Fuel 🧪
         </p>
         <h1 className="text-4xl lg:text-6xl font-bold mt-4">
           <span className="text-accent">Fruits</span> that{" "}
