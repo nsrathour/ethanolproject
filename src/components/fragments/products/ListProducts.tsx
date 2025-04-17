@@ -8,6 +8,7 @@ type ListProductProps = {
   products: Fruit[];
   isLoading: boolean;
 };
+
 const ListProducts = ({ products, isLoading }: ListProductProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const recordPerPage = 8;
@@ -45,11 +46,11 @@ const ListProducts = ({ products, isLoading }: ListProductProps) => {
           <div className="flex flex-col py-12 justify-center items-center w-full">
             <img
               src="/images/products/empty-stroll.png"
-              alt="Keranjang kosong"
+              alt="Empty cart"
               className="max-w-28"
             />
             <p className="text-base lg:text-xl mt-4">
-              Maaf, produk yang anda cari tidak tersedia
+              Sorry, the product you're looking for is not available
             </p>
           </div>
         )}
