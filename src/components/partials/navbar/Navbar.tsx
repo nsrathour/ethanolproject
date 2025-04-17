@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="cursor-pointer">
             <img
               src="/images/logo.png"
-              alt="Logo buahkita"
+              alt="FruitKita Logo"
               className="max-w-28"
             />
           </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
                   location.pathname === "/" ? "text-primary" : "text-dark"
                 } py-2 mx-4 flex group-hover:text-primary`}
               >
-                Beranda
+                Home
               </Link>
             </li>
             <li className="group">
@@ -83,7 +83,7 @@ const Navbar = () => {
                     : "text-dark"
                 } py-2 mx-4 flex group-hover:text-primary`}
               >
-                Produk
+                Products
               </Link>
             </li>
             <li className="group">
@@ -95,7 +95,7 @@ const Navbar = () => {
                     : "text-dark"
                 } py-2 mx-4 flex group-hover:text-primary`}
               >
-                Kontak
+                Contact
               </Link>
             </li>
             {isUserLogin && (
@@ -161,7 +161,7 @@ const Navbar = () => {
                     className="font-medium text-base bg-primary text-white rounded-md py-2 px-4 
                   group-hover:bg-green-700"
                   >
-                    Masuk
+                    Sign In
                   </div>
                 </Link>
               </li>
@@ -173,7 +173,7 @@ const Navbar = () => {
                     className="font-medium text-base bg-white text-primary border border-primary rounded-md py-2 px-4
               group-hover:border-green-700 group-hover:text-green-700"
                   >
-                    Daftar
+                    Sign Up
                   </div>
                 </Link>
               </li>
@@ -183,7 +183,7 @@ const Navbar = () => {
       </div>
       {modalOpen && (
         <PopupDialog
-          title="Apakah anda yakin ingin logout?"
+          title="Are you sure you want to log out?"
           isLoading={isLoading}
           nOnClick={setModalOpen}
           yOnClick={handleLogout}
