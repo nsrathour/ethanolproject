@@ -18,11 +18,11 @@ const ShoppingSummary = ({
   return (
     <div className="w-full md:w-1/3 md:ps-1 mt-4 md:mt-0">
       <div className="border rounded-lg p-4">
-        <h1 className="text-lg md:text-xl font-semibold">Ringkasan Belanja</h1>
-        <h1 className="text-base font-semibold mt-2">Total Belanja</h1>
+        <h1 className="text-lg md:text-xl font-semibold">Shopping Summary</h1>
+        <h1 className="text-base font-semibold mt-2">Order Total</h1>
         <div className="flex justify-between">
           <p className="text base text-gray-500">
-            Total Harga ({productCart} Barang)
+            Total Price ({productCart} Item{productCart > 1 ? "s" : ""})
           </p>
           <p className="text base text-gray-500">
             {fruit.discount > 0 ? (
@@ -38,11 +38,11 @@ const ShoppingSummary = ({
           </p>
         </div>
         <div className="flex justify-between">
-          <p className="text base text-gray-500">Total Ongkos Kirim</p>
+          <p className="text base text-gray-500">Shipping Cost</p>
           <p className="text base text-gray-500 line-through">Rp 15.000</p>
         </div>
         <div className="flex justify-between">
-          <p className="text base text-gray-500">Asuransi Pengiriman</p>
+          <p className="text base text-gray-500">Shipping Insurance</p>
           <p className="text base text-gray-500 line-through">Rp 0</p>
         </div>
         <hr className="my-3" />
@@ -59,7 +59,7 @@ const ShoppingSummary = ({
                        w-full hover:bg-green-700"
         >
           <FontAwesomeIcon icon={faCreditCard} className="me-2" />
-          Bayar
+          Pay
         </Button>
       </div>
     </div>

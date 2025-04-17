@@ -9,8 +9,8 @@ const SideBar = ({ setFilterLoc, locations }: SideBarProps) => {
   return (
     <div className="hidden md:block w-full md:w-1/4 px-4">
       <div className="w-full rounded-lg shadow-md p-6">
-        <h3 className="text-xl font-semibold">Filter berdasarkan lokasi</h3>
-        <form action="" className="mt-4">
+        <h3 className="text-xl font-semibold">Filter by Location</h3>
+        <form className="mt-4">
           {locations.map((location) => {
             return (
               <div key={location.city}>
@@ -33,7 +33,7 @@ const SideBar = ({ setFilterLoc, locations }: SideBarProps) => {
       </div>
       <img
         src="/images/products/campaign.png"
-        alt="Poster Kampanye Food Waste"
+        alt="Food Waste Campaign Poster"
         className="rounded-lg shadow-xl mt-4 cursor-pointer hidden md:block"
       />
     </div>
