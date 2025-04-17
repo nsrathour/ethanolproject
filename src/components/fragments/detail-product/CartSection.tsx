@@ -19,14 +19,14 @@ type CartSectionProps = {
 };
 
 const CartSection = ({ isLoading, fruit, addToCart }: CartSectionProps) => {
-  const [productCart, setProductCart] = useState(1);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { isUserLogin } = useIsUserLogin();
   const navigate = useNavigate();
 
-  const handleBuyProduct = () => {
+  const handleBuyNow = () => {
     if (isUserLogin) {
-      if (fruit != undefined) {
+      if (fruit !== undefined) {
         const checkoutData: CheckoutData = {
           fruit: fruit,
           amount: 1,
@@ -34,21 +34,21 @@ const CartSection = ({ isLoading, fruit, addToCart }: CartSectionProps) => {
         navigate("/payment", { state: { checkoutData } });
       }
     } else {
-      setModalOpen(true);
+      setIsModalOpen(true);
     }
   };
 
   const handleAddToCart = () => {
     if (isUserLogin) {
-      if (fruit != undefined) {
-        addToCart(fruit.id, productCart);
+      if (fruit !== undefined) {
+        addToCart(fruit.id, quantity);
       }
     } else {
-      setModalOpen(true);
+      setIsModalOpen(true);
     }
   };
 
-  const navigateToLoginPage = async () => {
+  const redirectToLoginPage = async () => {
     window.location.href = "/login";
   };
 
@@ -56,27 +56,27 @@ const CartSection = ({ isLoading, fruit, addToCart }: CartSectionProps) => {
     <div className="w-full lg:w-3/12 mt-4 lg:mt-0 px-4">
       {fruit && !isLoading && (
         <div className="rounded-lg border p-4">
-          <h1 className="text-lg font-semibold">Atur jumlah dan catatan</h1>
+          <h1 className="text-lg font-semibold">Set Quantity and Notes</h1>
           <div className="flex items-center mt-4 md:mt-6">
             <ButtonAddCart
-              productCart={productCart}
+              productCart={quantity}
               incrementCart={() =>
-                productCart == fruit.stock
-                  ? setProductCart(productCart)
-                  : setProductCart(productCart + 1)
+                quantity === fruit.stock
+                  ? setQuantity(quantity)
+                  : setQuantity(quantity + 1)
               }
               decrementCart={() =>
-                productCart > 1
-                  ? setProductCart(productCart - 1)
-                  : setProductCart(productCart)
+                quantity > 1
+                  ? setQuantity(quantity - 1)
+                  : setQuantity(quantity)
               }
             />
-            <p className="ms-4">Sisa Stok : {fruit?.stock - productCart}</p>
+            <p className="ms-4">Remaining Stock: {fruit?.stock - quantity}</p>
           </div>
           <div className="flex items-center mt-4 cursor-pointer">
             <FontAwesomeIcon icon={faPencil} color="#4E9F3D" />
             <p className="ms-2 font-semibold text-primary text-base">
-              Tambah Catatan
+              Add Note
             </p>
           </div>
           <div className="flex items-center mt-2 justify-between">
@@ -85,12 +85,12 @@ const CartSection = ({ isLoading, fruit, addToCart }: CartSectionProps) => {
               {fruit.discount > 0 ? (
                 <span>
                   {rupiahFormatter(
-                    fruit.price * productCart -
-                      fruit.price * productCart * fruit.discount
+                    fruit.price * quantity -
+                      fruit.price * quantity * fruit.discount
                   )}
                 </span>
               ) : (
-                <span>{rupiahFormatter(fruit.price * productCart)}</span>
+                <span>{rupiahFormatter(fruit.price * quantity)}</span>
               )}
             </p>
           </div>
@@ -98,24 +98,24 @@ const CartSection = ({ isLoading, fruit, addToCart }: CartSectionProps) => {
             onClick={handleAddToCart}
             classname="font-medium text-base bg-primary text-white rounded-md py-2 px-4 hover:bg-green-700 mt-3 w-full"
           >
-            + Keranjang
+            + Add to Cart
           </Button>
           <Button
             classname="mt-2 font-medium text-base bg-white text-primary border border-primary rounded-md py-2 px-4
             hover:border-green-700 hover:text-green-700 w-full"
-            onClick={handleBuyProduct}
+            onClick={handleBuyNow}
           >
-            Beli Sekarang
+            Buy Now
           </Button>
         </div>
       )}
-      {isLoading && <Skeleton height="200px" className="" width="100%" />}
-      {modalOpen && (
+      {isLoading && <Skeleton height="200px" width="100%" />}
+      {isModalOpen && (
         <PopupDialog
-          title="Anda belum login, silahkan login terlebih dahulu!"
+          title="You are not logged in. Please log in first!"
           isLoading={false}
-          nOnClick={setModalOpen}
-          yOnClick={navigateToLoginPage}
+          nOnClick={setIsModalOpen}
+          yOnClick={redirectToLoginPage}
         />
       )}
     </div>

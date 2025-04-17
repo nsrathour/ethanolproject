@@ -12,6 +12,7 @@ const ImageSection = ({ image, isLoading }: ImageSectionProps) => {
       {image && !isLoading && (
         <img
           src={image}
+          alt="Product"
           className="max-w-64 sm:max-h-64 lg:max-w-full aspect-square object-cover object-center rounded-lg"
         />
       )}

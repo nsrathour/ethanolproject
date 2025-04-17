@@ -6,12 +6,12 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-type DesctiptionSectionProps = {
+type DescriptionSectionProps = {
   isLoading: boolean;
   fruit: Fruit | undefined;
 };
 
-const DesctiptionSection = ({ isLoading, fruit }: DesctiptionSectionProps) => {
+const DescriptionSection = ({ isLoading, fruit }: DescriptionSectionProps) => {
   return (
     <div className="w-full mt-6 sm:mt-0 sm:w-3/5 lg:w-6/12 px-4">
       {fruit && !isLoading && (
@@ -40,8 +40,8 @@ const DesctiptionSection = ({ isLoading, fruit }: DesctiptionSectionProps) => {
             </p>
             {fruit.discount > 0 && (
               <div className="flex items-center">
-                <p className="mx-2  md:mx-4">-</p>
-                <div className="text-xs text-red-700 bg-red-200 py-1 px-2 rounded-md ">
+                <p className="mx-2 md:mx-4">-</p>
+                <div className="text-xs text-red-700 bg-red-200 py-1 px-2 rounded-md">
                   {fruit.discount}%
                 </div>
                 <p className="ms-2 text-sm line-through">
@@ -66,16 +66,16 @@ const DesctiptionSection = ({ isLoading, fruit }: DesctiptionSectionProps) => {
               />
               <p className="text-base ms-1">{fruit.rating && fruit.rating}</p>
             </ListDetail>
-            <ListDetail title="Stok">
+            <ListDetail title="Stock">
               <p className="text-base ms-1">{fruit.stock}</p>
             </ListDetail>
-            <ListDetail title="Lokasi">
+            <ListDetail title="Location">
               <p className="text-base ms-1">{fruit.place}</p>
             </ListDetail>
-            <ListDetail title="Terjual">
+            <ListDetail title="Sold">
               <p className="text-base ms-1">{fruit.sold}</p>
             </ListDetail>
-            <ListDetail title="Berat">
+            <ListDetail title="Weight">
               <p className="text-base ms-1">{fruit.weight} Kg</p>
             </ListDetail>
           </div>
@@ -96,4 +96,4 @@ const DesctiptionSection = ({ isLoading, fruit }: DesctiptionSectionProps) => {
   );
 };
 
-export default DesctiptionSection;
+export default DescriptionSection;
