@@ -18,11 +18,11 @@ const CardHistory = ({ history }: { history: History }) => {
         <p className="mx-2">-</p>
         <p className="text-sm">{history.payment_info}</p>
       </div>
-      <h1 className="text-lg text-gray-500 mt-2">Total Transaksi</h1>
+      <h1 className="text-lg text-gray-500 mt-2">Transaction Total</h1>
       <h1 className="text-xl font-semibold mt-1">
         {rupiahFormatter(history.gross_amount)}
       </h1>
-      <div className="flex justify-between items-cente mt-2">
+      <div className="flex justify-between items-center mt-2">
         {history.status == "pending" && (
           <div className="py-1 px-3 rounded-lg border text-yellow-500 border-yellow-500">
             Pending
@@ -40,7 +40,7 @@ const CardHistory = ({ history }: { history: History }) => {
         )}
         <div className="flex items-center">
           <p className="text-base font-semibold text-primary">
-            Lihat Detail Transaksi
+            View Transaction Details
           </p>
           <div className="py-1 px-2 ms-2 rounded-lg border">
             <FontAwesomeIcon icon={faEllipsis} color="#4E9F3D" />
