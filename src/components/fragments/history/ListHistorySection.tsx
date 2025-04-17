@@ -21,9 +21,9 @@ const ListHistorySection = ({
             <CardHistory history={item} />
           </div>
         ))}
-      {!isLoading && listHistory?.length == 0 && (
+      {!isLoading && listHistory?.length === 0 && (
         <div className="w-full h-32 flex justify-center items-center">
-          <h1>Anda belum melakukan transaksi sama sekali</h1>
+          <h1>You haven't made any transactions yet</h1>
         </div>
       )}
       {isLoading &&
