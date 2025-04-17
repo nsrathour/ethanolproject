@@ -16,7 +16,7 @@ const ProductSection = ({
   return (
     <>
       <h1 className="mt-4 text-lg md:text-xl font-semibold">
-        Barang yang dibeli
+        Purchased Item
       </h1>
       <div className="flex flex-wrap mt-2">
         <div className="w-2/6 sm:w-1/6 p-1 aspect-w-1 aspect-h-1">
@@ -30,10 +30,10 @@ const ProductSection = ({
         <div className="w-4/6 sm:w-4/6">
           <p className="text-base font-semibold">{checkoutData.fruit.name}</p>
           <p className="text-sm text-gray-500 mt-1">
-            Berat : {checkoutData.fruit.weight} Kg
+            Weight: {checkoutData.fruit.weight} Kg
           </p>
           <p className="text-sm text-red-500 mt-1">
-            Sisa : {checkoutData.fruit.stock - productCart}
+            Remaining: {checkoutData.fruit.stock - productCart}
           </p>
         </div>
         <div className="w-full sm:w-1/6 flex">
@@ -41,7 +41,7 @@ const ProductSection = ({
             <ButtonAddCart
               productCart={productCart}
               incrementCart={() =>
-                productCart == checkoutData.fruit.stock
+                productCart === checkoutData.fruit.stock
                   ? setProductCart(productCart)
                   : setProductCart(productCart + 1)
               }

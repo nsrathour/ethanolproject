@@ -6,18 +6,18 @@ const Footer = () => {
           <div className="mb-8 w-full px-4 font-medium md:w-1/3">
             <img
               src="/images/logo.png"
-              alt="FruitKita Logo"
+              alt="Logo buahkita"
               className="max-w-40 -ml-2"
             />
             <h3 className="mt-2 mb-1 text-xl font-semibold text-dark">
-              Contact Us
+              Kontak Kami
             </h3>
-            <p>chitkara@gmail.com</p>
-            <p>Himachal Pardesh , INDIA</p>
+            <p>buahkita@gmail.com</p>
+            <p>Malang, Indonesia</p>
           </div>
           <div className="mb-8 w-full px-4 md:w-1/3">
             <h3 className="mb-5 text-xl font-semibold text-dark">
-              Help Links
+              Tautan Bantuan
             </h3>
             <ul className="text-dark">
               <li>
@@ -25,7 +25,7 @@ const Footer = () => {
                   href="#"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Tracking
+                  Pelacakan
                 </a>
               </li>
               <li>
@@ -33,7 +33,7 @@ const Footer = () => {
                   href="#"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Order Status
+                  Status Order
                 </a>
               </li>
               <li>
@@ -41,7 +41,7 @@ const Footer = () => {
                   href="#"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Shipping
+                  Pengiriman
                 </a>
               </li>
               <li>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
           <div className="mb-8 w-full px-4 md:w-1/3">
             <h3 className="mb-5 text-xl font-semibold text-dark">
-              Useful Links
+              Tautan Berguna
             </h3>
             <ul className="text-dark">
               <li>
@@ -64,7 +64,7 @@ const Footer = () => {
                   href="#home"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Special Offers
+                  Penawaran Spesial
                 </a>
               </li>
               <li>
@@ -72,7 +72,7 @@ const Footer = () => {
                   href="#about"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Gift Cards
+                  Kartu Hadiah
                 </a>
               </li>
               <li>
@@ -80,7 +80,7 @@ const Footer = () => {
                   href="#projects"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Advertising
+                  Periklanan
                 </a>
               </li>
               <li>
@@ -88,7 +88,7 @@ const Footer = () => {
                   href="#services"
                   className="mb-3 inline-block text-base hover:text-accent"
                 >
-                  Terms of Use
+                  Jangka Waktu Penggunaan
                 </a>
               </li>
             </ul>
