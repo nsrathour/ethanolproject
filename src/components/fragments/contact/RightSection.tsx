@@ -18,7 +18,15 @@ const RightSection = () => {
           <p>chitkara@mail.com</p>
           <p className="text-base font-medium text-gray-500 mt-8">Office</p>
           <p>chitkara university, HP</p>
-          <p className="underline cursor-pointer">View on Google Maps</p>
+          <a
+  href="https://maps.google.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="underline cursor-pointer"
+>
+  View on Google Maps
+</a>
+
         </div>
       </div>
     </div>
