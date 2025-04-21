@@ -9,13 +9,12 @@ const Hero = () => {
           Kitchen Waste into Green Fuel 🧪
         </p>
         <h1 className="text-4xl lg:text-6xl font-bold mt-4">
-          <span className="text-accent">Fruits</span> that{" "}
-          <span className="text-primary">You Love </span>
-          Delivered to <span className="text-accent">You</span>
+          <span className="text-accent">Fruits</span> waste{" "}
+          <span className="text-primary">That you throw away. </span>
+          can convert into <span className="text-accent">bio fuel</span>
         </h1>
         <p className="text-base font-semibold mt-6 lg:mt-10">
-          Save Fruits, Affordable Prices! Buy Fresh Quality Fruits,
-          Reduce Food Waste. Stay Healthy, Protect the Environment!
+        Protect the Environment! Convert waste into fuel.
         </p>
         <div className="flex mt-6 lg:mt-10">
           <Link to="/login">
