@@ -24,7 +24,7 @@ const AuthLayout = ({ title, children, navigationType }: AuthLayoutProps) => {
           
           {/* Header with title and logo */}
           <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-semibold">{title}</h1>
+            <h1 className="text-4xl font-semibold">Register </h1>
             <Link to="/">
               <img
                 src="/images/logo.png"
